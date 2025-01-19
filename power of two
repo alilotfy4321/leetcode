@@ -1,0 +1,20 @@
+
+//powers of two = ...,16,8,4,2,1 
+//               ...,2^4,2^3,2^2,2^1,2^0
+// represented in :  n>0 && (n & (n - 1)) == 0;
+
+class Main {
+   static  Boolean powOfTwo(int n){
+        return n>0 && (n & (n - 1)) == 0;
+    }
+    public static void main(String[] args) {
+        System.out.println("Try programiz.pro");
+        Boolean isPwerOfTwo=powOfTwo(3);
+        if(isPwerOfTwo){System.out.println("power of two");}
+        else{
+            System.out.println(" : not power of two");
+        }
+        
+
+    }
+}
