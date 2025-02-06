@@ -42,6 +42,28 @@ public class Leetcode {
      
      return a;
     }
+//---------------------187. Repeated DNA Sequences
+//using sliding window,HashMap<,>mp
+public List<String> findRepeatedDnaSequences(String s) {
+        //frequency for store strings
+        HashMap<String,Integer> mp = new HashMap<String,Integer>();//frequency 
+        ArrayList<String> list=new ArrayList();
+
+       
+        if(s.length()<10)return list;
+        for(int i=0;i<=s.length()-10;i++){
+             //window
+            String temp=s.substring(i,i+10);
+            //if exist ++ or put it with init 0+1
+            mp.put(temp,mp.getOrDefault(temp,0)+1);
+          
+          if(mp.get(temp)==2){
+            list.add(temp);
+          }
+        }
+        return list;
+    }
+//---------------------------
 
 
 
