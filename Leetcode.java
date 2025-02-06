@@ -64,8 +64,4 @@ public List<String> findRepeatedDnaSequences(String s) {
         return list;
     }
 //---------------------------
-
-
-
-
-
+}
